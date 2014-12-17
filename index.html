@@ -1,273 +1,62 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>疯狂手指 - 根本不能停下来</title>
-    <meta name="viewport"
-          content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-
-    <meta name="full-screen" content="true"/>
-    <meta name="screen-orientation" content="portrait"/>
-    <meta name="x5-fullscreen" content="true"/>
-    <meta name="360-fullscreen" content="true"/>
-    
-
-    <style>
-        body {
-            text-align: center;
-            background: #000000;
-            padding: 0;
-            border: 0;
-            margin: 0;
-            height: 100%;
-        }
-
-        * {
-            -webkit-touch-callout:none;
-            -webkit-user-select:none;
-            -khtml-user-select:none;
-            -moz-user-select:none;
-            -ms-user-select:none;
-            user-select:none;
-            -webkit-tap-highlight-color:rgba(0,0,0,0);
-        }
-
-        html {
-            -ms-touch-action: none; /* Direct all pointer events to JavaScript code. */
-        }
-        .button {
-        display: inline-block;
-        zoom: 1;
-        vertical-align: baseline;
-        margin: 0 2px;
-        outline: none;
-        cursor: pointer;
-        text-align: center;
-        text-decoration: none;
-        font: 14px/100% Arial, Helvetica, sans-serif;
-        padding: .5em 2em .55em;
-        text-shadow: 0 1px 1px rgba(0,0,0,.3);
-        -webkit-border-radius: .5em;
-        -moz-border-radius: .5em;
-        border-radius: .5em;
-        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-        -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-        box-shadow: 0 1px 2px rgba(0,0,0,.2);
-        }
-
-        .red {
-        color: #faddde;
-        border: solid 1px #980c10;
-        background: #d81b21;
-        background: -webkit-gradient(linear, left top, left bottom, from(#ed1c24), to(#aa1317));
-        background: -moz-linear-gradient(top, #ed1c24, #aa1317);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ed1c24', endColorstr='#aa1317');
-        }
-
-        .active {
-            background: #d81b01;
-        }
-
-    </style>
-</head>
-<body>
-<div style="display:inline-block;width:100%; height:100%;margin: 0 auto; background: black; position:relative;" id="gameDiv">
-    <div style="text-align:center;margin:50px;">
-        <span id="timer" style="color:#fff;font-size:20px;">10 秒</span>
-    </div>
-    <button id="button" class="button red" style="margin-top: 30px;width: 160px;height:160px;border-radius:80px;font-size:18px;font-weight:bold;">点我点我</button>
-    <div style="margin:20px;text-align:center;">
-        <div id="result" style="color:#fff;font-size:30px;">0 次</div>
-        <div id="best" style="margin-top:20px;color:#fff;font-size:20px;"> </div>
-    </div>
-</div>
-
-<div id="sbg" class="sbg">
-    <div class="arron"></div>
-    <p id="msg">请点击右上角<br />点击【分享到朋友圈】<br />测测好友的反应能力吧！</p>
-</div>
-
-<div class="ads" style="width: 100%; height: 69px; margin: 0px; margin-top: -60px; padding: 0px; border: none; background: none; "-->
-</div>
-
-
-<script language=javascript>
-        var helptime=0;
-        function help(){
-            
-        }
-
-       var mebtnopenurl = 'http://www.whatisapple.com/weixin/';
-        var myscore=0;
-        window.shareData = {
-                "imgUrl": "http://www.whatisapple.com/weixin/shouzhi/icon.png",
-                "timeLineLink": "http://www.whatisapple.com/weixin/shouzhi/",
-                "tTitle": "疯狂手指-根本停不下来，玩过之后我的手指已经不是我的了！",
-                "tContent": "在10秒内疯狂的点按钮，想赢？不容易。"
-        };
-                
-        function goHome(){
-            window.location="http://www.whatisapple.com/";
-        }
-        function dp_share(score){
-            if(score>0){
-                document.title = "10秒我能点"+score+"下！你行？你试试"
-            }
-            else{
-                document.title = "疯狂手指-根本停不下来，玩过之后我的手指已经不是我的了！"
-            }
-            document.getElementById("share").style.display="";
-            window.shareData.tTitle = document.title;
-        }
-        function dp_Ranking(){
-            window.location="http://m.whatisapple.com/";
-        }
-
-        function showAd(){
-        }
-        function hideAd(){
-        }
-        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
-            
-            WeixinJSBridge.on('menu:share:appmessage', function(argv) {
-                WeixinJSBridge.invoke('sendAppMessage', {
-                    "img_url": window.shareData.imgUrl,
-                    "link": window.shareData.timeLineLink,
-                    "desc": window.shareData.tContent,
-                    "title": window.shareData.tTitle
-                }, onShareComplete);
-            });
-
-            WeixinJSBridge.on('menu:share:timeline', function(argv) {
-                WeixinJSBridge.invoke('shareTimeline', {
-                    "img_url": window.shareData.imgUrl,
-                    "img_width": "640",
-                    "img_height": "640",
-                    "link": window.shareData.timeLineLink,
-                    "desc": window.shareData.tContent,
-                    "title": window.shareData.tTitle
-                }, onShareComplete);
-            });
-        }, false);
-        </script>
-        <div id=share style="display: none">
-            <img width=100% src="share.png" style="position: fixed;z-index:9999; top: 0; left: 0; display: " ontouchstart="document.getElementById('share').style.display='none';">
-        </div>
-        <div id="result_panel" style="display:none;text-align:center;padding-top:50px;position:absolute;top:0;right:0;bottom:0;left:0;background-color:rgba(0,0,0,0.5)">
-            <div><button id="reset" style="font-size:25px">再玩一次</button><br><button id="doShare" style="font-size:25px">炫耀一下</button></div>
-        </div>
-        <script src="jquery.min.js"></script>
-        <div style="display: none;">
-            <script type="text/javascript">
-            function dp_submitScore(score){
-
-                dp_share(score);
-
-                /*
-                if(score<40){
-                    if (confirm("")){
-                        myCRdata.score = score;
-                        myCRdata.scoreName = score+"步";
-                        dp_share(score);
-                    }
-                }
-                */
-            }
-            function onShareComplete(res) {
-                    document.location.href = mebtnopenurl;
-            }
-            </script>
-
-            <script type="text/javascript">
-                    var initial = 1000;
-                    var count = initial;
-                    var counter; //10 will  run it every 100th of a second
-                    var state = 0;
-                    var total = 0;
-
-                    if (localStorage.max) {
-                        $('#best').html( '最好成绩：' + localStorage.max + ' 次');
-                    }
-
-                    function timer() {
-                        if (count <= 0) {
-                            clearInterval(counter);
-                            state = 0;
-
-                            $('#result_panel').show();
-
-                            if ( !localStorage.max || parseInt(localStorage.max) < total) {
-                                localStorage.max = total;
-                                $('#best').html( '最好成绩：' + localStorage.max + ' 次');
-                            }
-
-                            localStorage.max = parseInt(localStorage.max) > total ? localStorage.max: total;
-                            return;
-                        }
-                        count--;
-                        displayCount(count);
-                    }
-
-                    function displayCount(count) {
-                        var res = count / 100;
-                        document.getElementById("timer").innerHTML = res.toPrecision(count.toString().length) + " 秒";
-                    }
-
-                    $(document).on('touchmove', function(e) {
-                        e.preventDefault();
-                    })
-
-                    $('#button').on('touchstart', function () {
-
-                        if (!state) {
-                            state = 1;
-                            counter = setInterval(timer, 10);
-                        }
-
-                        this.classList.add('active');
-                    });
-
-                    $('#button').on('touchend', function () {
-                        if (state) {
-                            total++;
-                            $('#result').html(total + ' 次');
-                        }
-                        this.classList.remove('active');
-                    });
-
-                    // $('#stop').on('click', function () {
-                    //     clearInterval(counter);
-                    // });
-
-                    function reset() {
-                        count = initial;
-                        total = 0;
-                        state = 0;
-                        $('#result').html(total + ' 次');
-                        $('#timer').html(10 + ' 秒');
-                    }
-
-                    $('#reset').on('touchend', function () {
-                        reset();
-                        $('#result_panel').hide();
-                    });
-
-                    $('#doShare').on('touchend', function () {
-                        dp_share(total);
-                        $('#result_panel').hide();
-                        reset();
-                    });
-
-
-                    displayCount(initial);
-            </script>
-
-<scritp>
-<!-- document.getElementById("ads").style.display='inline-block'; -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes"> 
+    <meta name="robots" content="index,follow"> 
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;">
+	<title>最强眼力</title>	
+     <link href="9.css" tppabs="http://wx.9ku.com/ceshi/50/9.css" media="screen" rel="stylesheet" type="text/css">
+    <script>
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+    	WeixinJSBridge.call('showOptionMenu');
+    });
+	//new Image().src = 'action.php-id=12'/*tpa=http://wx.9ku.com/game/action.php?id=12*/;
+	var moreGamesLocation = '';
+	function play68_init() {		updateShare(0);}
+	function updateShare(bestScore) {
+		imgUrl = 'http://t2.qpic.cn/mblogpic/6c1d5db929f123ac16c0/2000';
+		//var domains = ['http://wx.9ku.com/ceshi/50/www.lieqicun.com','http://wx.9ku.com/ceshi/50/www.lieqicun.cn','http://wx.9ku.com/ceshi/50/www.lieqicun.net','http://wx.9ku.com/ceshi/50/115.29.44.52'];
+		//var domain = domains[new Date().getTime()%4];
+		lineLink = 'index.htm'/*tpa=http://wx.9ku.com/ceshi/50/*/;
+		descContent = "考考你的眼力！你的眼睛跟得上吗？";
+		updateShareScore(bestScore);appid = '';
+	}	
+	function updateShareScore(bestScore) {
+		if(bestScore > 0) {shareTitle = "我玩《最强眼力》过了" + bestScore + "关，眼都花了！";}
+		else{shareTitle = "不玩《最强眼力》怎么知道自己的眼力原来那么好？";}
+	}
 </script>
+</head>
+  <body class="os-windows osv-6_1 osmv-6" onorientationchange="orentationChanged()">    
+  <div id="adTop"><script src="adTop.js" tppabs="http://wx.9ku.com/ceshi/script/adTop.js"></script></div>
+    <DIV class="main">
+      <div id="frame">
+        <div id="logo" style="display: none; opacity: 0;"></div>
+        <div id="playButton" style="display: none; opacity: 1;"></div>
+        <div id="level" style="display: none;">
+                     <span id="levelLabel">关卡：</span>
+          <span id="levelNum">1</span>
+        </div>
+        <div id="lives" style="display: none;">
+          <div id="hearts"><div class="heart">&nbsp;</div><div class="heart">&nbsp;</div><div class="heart">&nbsp;</div></div>
+                <div id="livesLabel">命：</div>
+        </div>
+        <div id="b" style="display: block;">
+          <div style="display: block;" id="b1"></div>
+          <div style="display: block;" id="b2"></div>
+          <div style="display: block;" id="b3"></div>
+        </div>
+        <canvas height="240" width="320" id="canvas" style="display: block;"></canvas><div id="msg" style="position:relative;display: block; opacity: 1;bottom:50px;"></div>
+      </div>
+	 <div  style="position:relative; display: block; margin: 0px auto;bottom:120px;z-index:20000">
+	 	<a style="font-size: 15px;color: #f00;font-weight: bold;display: block;height: 30px;line-height: 30px;" href="javascript:if(confirm('http://wx.9ku.com/ceshi/51/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://wx.9ku.com/ceshi/51/'" tppabs="http://wx.9ku.com/ceshi/51/">变态考反应游戏《密室逃脱》能通关你就能闪子弹了！</a>
+	 </div>
+      <script type="text/javascript" src="9.js" tppabs="http://wx.9ku.com/ceshi/50/9.js"></script>
+      
+    </DIV>
 
-<div style="display:none">
-</div>
+        <script src="count.js" tppabs="http://wx.9ku.com/count.js"></script>
 </body>
 </html>
