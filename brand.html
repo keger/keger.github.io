@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>品牌馆</title>
+<link rel="stylesheet" type="text/css" href="css/brand.css" />
+<link rel="stylesheet" type="text/css" href="css/GD.css" />
+</head>
+
+<body>
+<div class="content">
+   <div class="con-box first">
+      <div class="con-box-left">
+         <script type="text/javascript" src="js/jquery000.min.js"></script>
+         <script type="text/javascript" src="js//slides.min.jquery.js"></script>
+         <script type="text/javascript">
+            function nTabs(thisObj, Num) {
+                if (thisObj.className == "active") return;
+                var tabList = document.getElementById("myTab").getElementsByTagName("li");
+                for (i = 0; i < tabList.length; i++) {
+                    if (i == Num) {
+                        thisObj.className = "active";
+                        document.getElementById("myTab_Content" + i).style.display = "block";
+                    } else {
+                        tabList[i].className = "normal";
+                        document.getElementById("myTab_Content" + i).style.display = "none";
+                    }
+                }
+            }
+			function ChangeDiv(divId,divName,zDivCount,obj)
+            {
+                for(i=0;i<=zDivCount;i++)
+                {
+                    document.getElementById(divName+i).style.display="none";
+                }
+                document.getElementById(divName+divId).style.display="block";
+                var nav = document.getElementById("nav").getElementsByTagName("span")
+                for (i=0;i<nav.length; i++){
+                    nav[i].style.backgroundColor="#535353"
+                }
+                obj.style.backgroundColor="#f00"
+            }
+</script>
+	     <script type="text/javascript">
+                        $(function(){
+                            $('#slides').slides({
+                                preload: true,
+                                preloadImage: 'img/loading.gif',
+                                play: 3000,
+                                pause: 2500,
+                                hoverPause: true,
+                                animationStart: function(){
+                                    $('.caption').animate({
+                                        bottom:35
+                                    },100);
+                                },
+                                animationComplete: function(current){
+                                    $('.caption').animate({
+                                        bottom:35
+                                    },200);
+                                    if (window.console && console.log) {
+                                        console.log(current);
+                                    };
+                                }
+                            });
+                        });
+                       
+            </script>
+         <div class="containt">
+			<div class="in_left">
+				<div class="adleft">
+				  <div id="focus">
+                    <div class='poster'>
+                      <div id='container'>
+                        <div id='example'>
+                          <div id='slides'>
+                            <div class='slides_container'>
+                              <div>                          
+                                <a href="#"><img src="images/img01.jpg"/></a>
+                                <div class="words"><a href="#">透而不漏的棱形镂空，薄薄柔顺地贴在玲珑的曲线上，朦胧中隐约可见肌肤,含蓄的性最感动人!</a></div>
+                              </div>
+                              <div>
+                                 <a href="#"><img src='images/img01.jpg' /></a>
+                                 <div class="words"><a href="#">透而不漏的棱形镂空，薄薄柔顺地贴在玲珑的曲线上，朦胧中隐约可见肌肤,含蓄的性最感动人!</a></div>
+                              </div>
+                              <div>
+                                 <a href="#"><img src='images/img01.jpg' /></a>
+                                 <div class="words"><a href="#">透而不漏的棱形镂空，薄薄柔顺地贴在玲珑的曲线上，朦胧中隐约可见肌肤,含蓄的性最感动人!</a></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+			      </div>
+				</div>
+            </div>
+		</div>
+      </div>
+      <div class="con-box-right">
+         <div class="R-top"><a href="#"><img src="images/img02.jpg" /></a></div>
+         <div class="R-down">
+            <div><a href="#"><img src="images/logo01.jpg" /></a></div>
+            <div ><a href="#"><img src="images/logo02.jpg" /></a></div>
+            <div><a href="#"><img src="images/logo03.jpg" /></a></div>
+            <div class="right"><a href="#"><img src="images/logo04.jpg" /></a></div>
+         </div>
+      </div>
+      <div class="clear"></div>
+   </div>
+   <div class="con-box">
+       <div class="con-box-left">
+          <p><img src="images/img03.jpg" /></p>
+          <p style=" height:60px; margin-top:15px; width:370px;"><a href="#">渔牌花田舞100%桑蚕丝田园碎花V领连衣裙，流露出精致大女人的淑女名媛范。经过24种色彩结合的清新花卉图案，犹如阳光下飘舞的蝴蝶，搭配的小吊带和大蝴蝶结腰带，体现出浪漫甜美的气息</a></p>
+          <p style=" margin-top:20px;"><img src="images/img04.jpg" /></p>
+       </div>
+       <div class="con-box-right">
+             <div class="R-top"><a href="#"><img src="images/img05.jpg" /></a></div>
+             <div class="R-down pr">
+                <div><a href="#"><img src="images/img06.jpg" /></a></div>
+                <div><a href="#"><img src="images/img07.jpg" /></a></div>
+                <div><a href="#"><img src="images/img08.jpg" /></a></div>
+                <div class="right"><a href="#"><img src="images/img09.jpg" /></a></div>
+             </div>
+       </div>
+       <div class="clear"></div>
+   </div>
+   <div class="con-box">
+       <div class="con-box-left">
+          <p><img src="images/img22.jpg" /></p>
+          <p style=" height:60px; margin-top:15px; width:370px;"><a href="#">酷兮家居，引领时尚。单人懒人沙发，享受生活，如怀抱般的体验装点你的小家，让你轻松打造出一份属于自己的温馨空间。它很轻便，把它放在阳台上，你就能躺着晒太阳、磨时间，悠闲地看书或者翻翻杂志。</a></p>
+          <p style=" margin-top:20px;"><img src="images/img28.jpg" /></p>
+       </div>
+       <div class="con-box-right">
+             <div class="R-top"><a href="#"><img src="images/img25.jpg" /></a></div>
+             <div class="R-down pr">
+                <div><a href="#"><img src="images/img10.jpg" /></a></div>
+                <div><a href="#"><img src="images/img11.jpg" /></a></div>
+                <div><a href="#"><img src="images/img12.jpg" /></a></div>
+                <div class="right"><a href="#"><img src="images/img13.jpg" /></a></div>
+             </div>
+       </div>
+       <div class="clear"></div>
+   </div>
+   <div class="con-box">
+       <div class="con-box-left">
+          <p><img src="images/img23.jpg" /></p>
+          <p style=" height:60px; margin-top:15px; width:370px;"><a href="#">石瓢造型简练，古朴大方，刚中有劲，堪称紫砂器不朽的经典老款此壶选用优质降坡泥，效法传统经典，壶身上细刻的深山雪松图，非常细腻，刀法灵动，刻画传神，栩栩如生，渲染出一大自然壮观的意境。</a></p>
+          <p style=" margin-top:20px;"><img src="images/img29.jpg" /></p>
+       </div>
+       <div class="con-box-right">
+             <div class="R-top"><a href="#"><img src="images/img26.jpg" /></a></div>
+             <div class="R-down pr">
+                <div><a href="#"><img src="images/img14.jpg" /></a></div>
+                <div><a href="#"><img src="images/img15.jpg" /></a></div>
+                <div><a href="#"><img src="images/img16.jpg" /></a></div>
+                <div class="right"><a href="#"><img src="images/img17.jpg" /></a></div>
+             </div>
+       </div>
+       <div class="clear"></div>
+   </div>
+   <div class="con-box">
+       <div class="con-box-left">
+          <p><img src="images/img24.jpg" /></p>
+          <p style=" height:60px; margin-top:15px; width:370px;"><a href="#">Eotton使用纯天然有机棉料，环保染色健康舞污染。全方位呵护宝宝的健康！触感温润，透气性佳，吸汗，快干，更不会产生静电。</a></p>
+          <p style=" margin-top:20px;"><img src="images/img30.jpg" /></p>
+       </div>
+       <div class="con-box-right">
+             <div class="R-top"><a href="#"><img src="images/img27.jpg" /></a></div>
+             <div class="R-down pr">
+                <div><a href="#"><img src="images/img18.jpg" /></a></div>
+                <div><a href="#"><img src="images/img19.jpg" /></a></div>
+                <div><a href="#"><img src="images/img20.jpg" /></a></div>
+                <div class="right"><a href="#"><img src="images/img21.jpg" /></a></div>
+             </div>
+       </div>
+       <div class="clear"></div>
+   </div>
+   <div class="clear"></div>
+</div>
+</body>
+</html>
