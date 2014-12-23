@@ -1,0 +1,178 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*2012年3月28日 首页切换广告*/
+.adA { padding:0 0 10px}
+.adA img{width:980px}
+#adA .fi01{position:relative;cursor:pointer;width:980px;margin:0 auto;float:left;font-size:0;zoom:1;}
+#adA .fi01 .fi_player{width:100%;}
+#adA .fi01 .fi_tt{display: none;}
+#adA .fi01 .fi_tab{height:16px;display:inline;position:absolute;background:#fff;}
+#adA .fi01 .fi_tabRB{right:-1px;bottom:0;_bottom:2px;}
+#adA .fi01 .fi_tab span{width:28px;margin-right:1px;font:9px/10px 'Arial';color:#CECECE;float:left;}
+#adA .fi01 .fi_tab span.now{background-color:#2295a1;}
+#adA .fi01 .fi_tabLB span,#adA .fi01 .fi_tabRB span{height:13px;padding-top:3px;background-color:#666;}
+#adA .fi01 .fi_tabLT span,#adA .fi01 .fi_tabRT span{height:16px;padding-top:0;background-color:#d07325;}
+
+/*分页*/
+.page_div{ padding:10px 0;position: relative;}
+.list_page{border-left:1px solid #d8d8d8;font:bold 14px/24px "宋体";float:right;}
+.list_page .next_page,.list_page .disabled,.list_page .current,.list_page a,.list_page .gap{padding:0 30px;border:1px solid #d8d8d8; border-left:0; display:inline-block;height:40px; line-height:40px;color:#666; float:left; background:#f0f0f0}
+.list_page .current,.list_page a,.list_page .gap{width:40px; padding:0; height:40px; display:inline-block}
+.list_page .current{color:#fff; background:#c31403}
+.list_page .disabled{color:#b4b4b4}
+.list_page .next_page{ width:auto}
+.page_bottom{width:450px; background:url("paging_icon1.png"/*tpa=http://z0.tuanimg.com/v1/ju/index/img/paging_icon1.png*/) 465px 10px no-repeat; padding:50px 245px 30px 0}
+.page_bottom .page_yun{width:450px; height:106px; text-align:right}
+.page_bottom .page_yun a{width:196px;height:90px; display:inline-block;margin-right:30px}
+.list_page a:hover{background:#fff}
+a.prev_page{padding:0 30px; width:auto}
+.page_div .picnext{width:225px;height:88px;display:block;position: absolute;left:465px;top:20px;}
+
+/*即将开始 已卖光 进行中  ////  淘小仙 淘小贱 小编*/
+.zt1 div h4{background-position:0 -203px}
+.zt1 div h4 a{width:80px; height:28px; display:block; float:right;margin-top:10px}
+.zt2 div h4{background-position:0 -249px;text-indent: 0;}
+.zt2 div h4 strong{display:inline;}
+.zt2 div h4 a{width:84px; height:30px; display:none; float:right;margin-top:10px}
+.zt3 div h4{background-position:0 -111px;text-indent: 1000px;}
+.zt3 div h4 a{width:84px; height:30px; display:none; float:right;margin-top:10px}
+.zt3 div h5 p .jub{display:none;}
+.zt4 div h4{ background-position:0 -65px;}
+.zt4 div h4 a{width:84px; height:30px; display:none; float:right;margin-top:10px}
+.zt4 div h5 p .jub{display:none;}
+.zt5 div h4{ background-position:left -157px;}
+.zt5 div h4 a{width:85px; height:28px; display:block; float:right;margin-top:10px}
+.zt6 div h4{ background-position:left -157px;}
+.zt6 div h4 a{width:85px; height:28px; display:block; float:right;margin-top:10px}
+
+/*///////////////////////////////////*/
+.hot_tuangou{border-top:7px solid #d80000; background:#fff}
+.hot_tuangou h2{padding:10px 5px}
+.hot_tuangou h2 span{font:18px/20px "微软雅黑";height:20px;}
+.hot_tuangou h2 span u{width:22px; height:20px; float:left;background:url("icon_bg.png"/*tpa=http://z0.tuanimg.com/v1/2012/images/icon_bg.png*/) -180px -2px no-repeat;}
+.hot_tuangou h2 a em{background:url("icon_bg.png"/*tpa=http://z0.tuanimg.com/v1/2012/images/icon_bg.png*/) -240px -4px no-repeat;width:13px; height:13px; display: inline-block;margin-left:4px}
+.hot_tuangou ul{width:966px; padding:10px 7px}
+.hot_tuangou ul li{width:143px; float:left; margin:0 9px; display:inline;position: relative;}
+.hot_tuangou ul li a img{width:141px; height:94px; display:inline-block;border:1px solid #ececec}
+.hot_tuangou ul li a:hover img{border:1px solid #d80000}
+.hot_tuangou ul li p{width:141px; height:20px; line-height:20px; overflow:hidden}
+.hot_tuangou ul li h2{ line-height:20px}
+.hot_tuangou ul li h2 em{text-decoration:line-through}
+.hot_tuangou ul li h2 span{font:bold 16px/20px "微软雅黑";color:#d80000}
+.hot_tuangou ul li span.over{display: block;width:141px;height: 94px;background: url("zxt_zhe.png"/*tpa=http://z0.tuanimg.com/v1/ju/index/img/zxt_zhe.png*/) no-repeat 0 0;position: absolute;left: 1px;top:1px;}
+
+.nottomorrow{font:18px/30px "微软雅黑";margin:100px 0 200px}
+
+.deal_new1{background: url("deal_new_2.png"/*tpa=http://z0.tuanimg.com/v1/2012/images/deal_new_2.png*/) no-repeat 0 0;height: 57px;left: 12px;position: absolute;top: 53px;width: 57px;}
+.deal_new2{background: url("anhaotuan2.png"/*tpa=http://z0.tuanimg.com/v1/2012/images/anhaotuan2.png*/) no-repeat 0 0;height: 61px;left: 12px;position: absolute;top: 53px;width: 61px;}
+
+
+/*2012年4月23日 首页二级导航*/
+.title{text-align:left;  padding-bottom:6px}
+.title span{font:22px/30px "微软雅黑";margin-right:10px;color:#c00;}
+.title em{margin:0 4px;color:#c00; font: Arial, Helvetica, sans-serif; font-weight:bold}
+
+.add_collection{ background:url("add_collection.png"/*tpa=http://z0.tuanimg.com/v1/2012/images/add_collection.png*/) no-repeat;margin-top:20px; height:80px; position:relative}
+.add_collection .bais{width:76px;height:32px;position:absolute; top:33px;right:262px;}
+.add_collection .addfavorite{width:94px;height:30px;position:absolute; top:35px;right:96px;}
+.add_collection a{ display:block}
+
+/*2012年6月5日 首页6.6ad add*/
+.adB{background:url("tao_20126.05bg1.png"/*tpa=http://z0.tuanimg.com/v1/2012/images/tao_20126.05bg1.png*/) 0 0 no-repeat;height:155px; padding-top:155px;width:980px; overflow:hidden}
+.adB div{background:url("tao_20126.05bg2.png"/*tpa=http://z0.tuanimg.com/v1/2012/images/tao_20126.05bg2.png*/) center top no-repeat;width:980px;font:14px/20px "宋体"; text-align:left;height:155px;}
+.adB .l{width:345px;color:#41002f;margin-top:34px;margin-left:32px}
+.adB .l a{color:#ba0069; text-decoration:underline; font-weight:bold}
+.adB .r{color:#000; width:550px;margin-top:2px}
+
+/*卖光 弹窗*/
+.sellOut{width:380px; height:210px;position: absolute; z-index:3; top:30px;left:0}
+.sellOut .bg{background:#b2b2b2;width:390px; height:220px; position:absolute; top:-5px;left:-5px; z-index:0;}
+.sellOut .close{width:32px;height:32px; display:block; position:absolute; top:-12px;right:-12px; background:url("tao_20125.22bg2.png"/*tpa=http://z0.tuanimg.com/v1/2012/images/tao_20125.22bg2.png*/) 0 0 no-repeat; _background:url("tao_20125.22bg3.png"/*tpa=http://z0.tuanimg.com/v1/2012/images/tao_20125.22bg3.png*/) 0 0 no-repeat; z-index:4}
+.sellOut .sellTxt{padding:25px;width:330px;height:160px; background:#fff; position:absolute;top:0;left:0; overflow:hidden}
+.sellOut .sellTxt .sellTittle{font:16px/30px "微软雅黑";width:330px;height:40px; border-bottom:1px dotted #ccc}
+.sellOut .sellTxt .sellTittle em{width:28px;height:30px; background:url("tao_20125.22bg3.png"/*tpa=http://z0.tuanimg.com/v1/2012/images/tao_20125.22bg3.png*/) -5px -33px no-repeat; float:left; vertical-align:middle;}
+.sellOut .sellTxt .sellP,.sellOut .sellTxt .sellBtn{width:330px; line-height:25px; margin-top:10px}
+.sellOut .sellTxt .sellBtn{text-align:center}
+#dialog_empty_deal{border:none;background:none;width:380px;height:210px;position:absolute;z-index:99999}
+#dialog_empty_deal .diginfo{ border:0}
+#dialog_empty_deal span.close{width:32px;height:32px; display:block; position:absolute; top:17px;right:-12px; background:url("tao_20125.22bg2.png"/*tpa=http://z0.tuanimg.com/v1/2012/images/tao_20125.22bg2.png*/) 0 0 no-repeat; _background:url("tao_20125.22bg3.png"/*tpa=http://z0.tuanimg.com/v1/2012/images/tao_20125.22bg3.png*/) 0 0 no-repeat; z-index:4}
+#everyDayNine{left:140px; top:14px;}
+
+.blockYH{background:#fff;text-align:left;padding-top: 10px;}
+.blockYH p{border:1px solid #e3e3e3;margin:15px;margin-top:0;padding:10px;line-height: 20px;}
+.blockYH p a{color:#D80000;}
+.nav_bom{width:100%;padding:0;margin:0;height:0px;overflow: hidden;background:url("tao_20125.16bg4.png"/*tpa=http://z0.tuanimg.com/v1/2012/images/tao_20125.16bg4.png*/) repeat-x scroll center bottom transparent}
+
+/*footer-记住折800*/
+.add_collection_bg{height:275px;background:url("add_collection2_3.jpg"/*tpa=http://z0.tuanimg.com/v1/2012/images/add_collection2_3.jpg*/) no-repeat center 1px;margin-bottom: 10px;}
+.add_collection_bg .block_acetion{height:275px;position: relative;}
+.add_collection_bg .block_acetion .bais{width:75px;height:30px;display: inline-block;position: absolute;left:200px;top:139px;}
+.add_collection_bg .block_acetion .addfavorite{width:165px;height:30px;display: inline-block;position: absolute;left:367px;top:191px;font:bold 20px/22px "微软雅黑";color:#333;}
+.add_collection_bg .block_acetion .addfavorite a{color: #d80000;}
+.add_collection_bg .block_acetion .addfavorite a:hover{color: #d80000;}
+.add_collection_bg .block_acetion .phoneh{width:225px;height:207px;display: inline-block;position: absolute;left:705px;top:105px;}
+.add_collection_bg .block_acetion .phoneh a{height:69px;width:65px;display: inline-block;background:url("add_collection2_phone.jpg"/*tpa=http://z0.tuanimg.com/v1/2012/images/add_collection2_phone.jpg*/);float: left;display: inline;}
+.add_collection_bg .block_acetion .phoneh a.iphone{background-position: 0 0;margin-right: 15px;}
+.add_collection_bg .block_acetion .phoneh a.android{background-position: -65px 0;margin-right: 15px;}
+.add_collection_bg .block_acetion .phoneh a.wap{background-position: -130px 0;}
+.add_collection_bg .block_acetion .phoneh a.iphone:hover{background-position: 0 -69px;}
+.add_collection_bg .block_acetion .phoneh a.android:hover{background-position: -65px -69px;}
+.add_collection_bg .block_acetion .phoneh a.wap:hover{background-position: -130px -69px;}
+.add_collection_bg .block_acetion .phoneh a.iphone:active {background-position: 0 -138px;}
+.add_collection_bg .block_acetion .phoneh a.android:active {background-position: -65px -138px;}
+.add_collection_bg .block_acetion .phoneh a.wap:active {background-position: -130px -138px;}
+.add_collection_bg .block_acetion .dingyue .int{width:175px;padding-top:5px;height:20px;line-height:20px;font-size:14px;: inline-block;position: absolute;left:375px;top:139px;border: none;background: none;outline: none;}
+.add_collection_bg .block_acetion .dingyue .btn{width:52px;height:32px;display: inline-block;position: absolute;left:561px;top:138px;border: none;background: none;cursor: pointer;}
+
+/*9块9专区*/
+.jytitle{color:#fff;height:44px;text-align: left;font:800 16px/50px "微软雅黑";background:url(../images/jkj_icon2.png);}
+.jytitle_bg{background:url(../images/jkj_icon2.png) 0 -44px;}
+.jytitle_bg2{background:url(../images/jkj_icon2.png) 0 -88px;}
+.jytitle span{font:800 20px/48px "微软雅黑";display:inline-block;padding-left:20px;color:#666; width:215px;}
+.jytitle span em{padding:0 10px 0 5px;font-style: italic;font-size:36px;vertical-align: top;*vertical-align: middle;}
+.jytitle a{color:#666666;width:180px;height:45px;display:inline-block;text-align: center;line-height: 45px;vertical-align: top;outline:none;}
+.jytitle a.evt{padding-left:30px;}
+.jytitle a.last{padding-left:15px;}
+.jytitle a:hover{text-decoration: none;color:#666666;}
+.jytitle a.on,.jytitle a.on:hover{color:#cc0000;}
+.jylist{border:3px solid #cc0000;background:#fff;border-top: none;}
+.jylist .time11,.jylist .time15,.jylist .time20{padding-bottom: 15px;}
+.jylist .time15,.jylist .time20{display:none;}
+.jytitle a.mrlink{background: url("jkj_icon1.png"/*tpa=http://z0.tuanimg.com/v1/ju/index/img/jkj_icon1.png*/) 0 -100px;width:99px;height:37px;line-height:37px;display:inline-block;color:#09c;font-size:16px;}
+
+.jydeal{float:left;margin:15px 0 0 30px; height:345px;width:290px;padding:0px;display:inline;}
+.jydeal .name{ height:50px;position:relative; background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5) !important;/*实现FF背景透明，文字不透明*/ filter:Alpha(opacity=50); background:#000;/*实现IE背景透明*/margin-top:-50px; color:#FFFFFF; line-height:25px; padding:0px 10px;}
+/*去抢购*/
+.jydeal .p-buy{ background-color:#eeeeee; height:50px; line-height:50px;}
+.jydeal .p-buy div{ float:left; margin-left:10px;}
+.jydeal .p-buy .now-p{ color:#c10000; font-size:36px; font-weight:bold; font-family:"黑体";}
+.jydeal .p-buy a{ float:right; background:url(../images/p-buy01.jpg) no-repeat scroll 0 0; width:85px; height:35px; margin-top:7px;}
+.jydeal .p-buy a:hover{background:url(../images/p-buy02.jpg) no-repeat scroll 0 0; width:85px; height:35px;}
+/*已抢光*/
+.jydeal .p-buyed{ background-color:#eeeeee; height:50px; line-height:50px;}
+.jydeal .p-buyed div{ float:left; margin-left:10px;}
+.jydeal .p-buyed .now-p{ color:#707070; font-size:36px; font-weight:bold; font-family:"黑体";}
+.jydeal .p-buyed a{ float:right; background:url(../images/p-buyed.jpg) no-repeat scroll 0 0; width:85px; height:35px; margin-top:7px;}
+/*15点开始*/
+.jydeal .starone{ background-color:#eeeeee; height:50px; line-height:50px;}
+.jydeal .starone div{ float:left; margin-left:10px;}
+.jydeal .starone .now-p{ color:#16a085; font-size:36px; font-weight:bold; font-family:"黑体";}
+.jydeal .starone a{ float:right; background:url(../images/15star.jpg) no-repeat scroll 0 0; width:85px; height:35px; margin-top:7px;}
+/*20点开始*/
+.jydeal .startwo{ background-color:#eeeeee; height:50px; line-height:50px;}
+.jydeal .startwo div{ float:left; margin-left:10px;}
+.jydeal .startwo .now-p{ color:#16a085; font-size:36px; font-weight:bold; font-family:"黑体";}
+.jydeal .startwo a{ float:right; background:url(../images/20star.jpg) no-repeat scroll 0 0; width:85px; height:35px; margin-top:7px;}
+
+.blank20{height:20px;}
+.zhcdeal h4 span em a,.zhcdeal h4 span em a:hover{display: inline;background: none;padding: 0;margin: 0;color:#fff;height: auto;float:none;text-decoration: none;}
+.zhcdeal div h4 span{width: 140px;}
+.zhcdeal div h4 span em a{width: auto;}
+
+.dealbox .blockAD{float: left;width: 310px;height: 255px;margin:0 25px 20px 0;text-align: left;z-index: 100;display: inline;background: #fff;}
+.dealbox .blockAD img{width:285px; height:185px; display:block; vertical-align:middle; margin:12px auto 0;}
+.dealbox .blockAD h3{width:285px; height:46px; margin:0 auto;line-height:46px;font:18px/46px "微软雅黑";background: url("deal_icon2.png"/*tpa=http://z0.tuanimg.com/v1/ju/index/img/deal_icon2.png*/) no-repeat 0 -203px;}
+.dealbox .blockAD h3 span{float:left;width: 148px;height:46px;padding-left: 8px;}
+.dealbox .blockAD h3 em{float:left;width: 120px;height:46px;padding-right:8px;text-align:right;font:bold 20px/46px "微软雅黑";background: url("deal_icon2.png"/*tpa=http://z0.tuanimg.com/v1/ju/index/img/deal_icon2.png*/) no-repeat -5px -203px;}
+.dealbox .blockAD a,.dealbox .blockAD a:hover{color:#fff;text-decoration: none;}
